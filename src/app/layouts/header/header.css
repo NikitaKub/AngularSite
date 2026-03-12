@@ -1,0 +1,167 @@
+.header_container{
+    background-color: #c00707;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_container{
+    display: flex;
+}
+.logo_container{
+    padding: 10px 10px 10px 0;
+
+    .logo{
+    height: 80px;
+    width: auto;
+    }
+}
+
+.nav_container{
+    width: 100%;
+}
+
+.svg_icon{
+    height: 18px;
+    width: auto;
+    display: block;
+}
+
+.links_container{
+    padding: 14px 10px 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    ul {
+        display:flex;
+        margin: 0px;
+        padding: 0px;
+    }
+    li {
+        margin: 0px;
+        padding-right: 10px;
+        list-style-type: none;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    .phone{
+        display: flex;
+        align-items: center;
+
+        span{
+            margin: 0px 3px 0px 3px;
+        };
+
+        .phone_icon{
+            height: 13px;
+            width: auto;
+            display: block;
+        }
+        .dropdown_icon{
+            margin-top: 3px;
+            height: 13px;
+            width: auto;
+            display: block;
+        }
+    }
+    .location_link{
+        display: flex;
+        align-items: center;
+        svg{
+            margin-left: 2px;
+            height: 13px;
+            width: auto;
+            display: block;
+        }
+    }
+    .drop_down_link{
+        display: flex;
+        align-items: center;
+        svg{
+            margin-left: 3px;
+            margin-top: 3px;
+            height: 13px;
+            width: auto;
+            display: block;
+        }
+    }
+}
+
+.active_bar_container{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    input, button{
+        padding: 5px 10px 5px 10px;
+        font-family: 'Calibri', 'Candara', 'Segoe', 'Segoe UI', 'Optima', 'Arial', sans-serif;
+        font-size:medium;
+        border: 0;
+        height: 40px;
+    }
+    input{
+        width: 100%;
+        max-width: 700px;
+        outline: none;
+    }
+
+    .left_group{
+        display: flex;
+        width: 100%;
+        
+    }
+    .right_group{
+        display: flex;
+    }
+
+    .left_button_type{
+        background-color: #134e8e;
+        color: white;
+    }
+    .left_button_type:hover{
+        cursor: pointer;
+        background-color: #185fac;
+    }
+
+    .right_button_type{
+        background-color: #c00707;
+        color: white;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+
+        margin-left: 10px;
+
+        span{
+            margin-left: 5px;
+        }
+    }
+    .right_button_type:hover{
+        cursor: pointer;
+        background-color: #970b0b;
+    }
+
+    .search_catalog_button{
+        border-radius: 5px 0px 0px 5px;
+        display: flex;
+        align-items: center;
+
+        span{
+            margin-left: 5px;
+        }
+    }
+    .search_button{
+        border-radius: 0px 5px 5px 0px;
+    }
+
+    .choose_car_button{
+        display: flex;
+        align-items: center;
+        margin: 0px 10px 0px 10px;
+        border-radius: 10px;
+        
+        span{
+            margin-right: 5px;
+        }
+    }
+}

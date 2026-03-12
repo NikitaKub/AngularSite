@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    font-size: medium;
+    font-family: 'Calibri', 'Candara', 'Segoe', 'Segoe UI', 'Optima', 'Arial', sans-serif;;
+}
+
+.wrapper{
+    max-width: 1440px;
+    width: 100%;
+}
