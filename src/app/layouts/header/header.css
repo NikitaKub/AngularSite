@@ -1,8 +1,7 @@
-.header_container{
+header{
     background-color: #c00707;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 .main_container{
     display: flex;
