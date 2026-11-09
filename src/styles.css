@@ -15,6 +15,7 @@ html, body{
     height: 100%;
     font-size: medium;
     font-family: 'Calibri', 'Candara', 'Segoe', 'Segoe UI', 'Optima', 'Arial', sans-serif;;
+    background-color: #eeeeee;
 }
 
 app-root {
@@ -26,4 +27,42 @@ app-root {
 .wrapper{
     max-width: 1440px;
     width: 100%;
+}
+
+
+
+.page_title_sector {
+  margin-bottom: 25px;
+  margin-top: 25px;
+
+  .main_header_title {
+    font-size: 28px;
+    font-weight: 800;
+    padding-left: 10px;
+    margin: 0;
+  }
+}
+
+.sector_container_header{
+    padding-left: 10px;
+
+    font-size: 26px;
+    font-weight: 800;
+    color: #3a3a3a;
+}
+
+.section_card {
+  background-color: #ffffff;
+  border-top: solid #ff4400 5px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+  padding: 30px 35px;
+  margin-bottom: 35px;
+
+  .sector_sub_header {
+    font-size: 22px;
+    font-weight: bold;
+    color: #134e8e;
+    margin: 0 0 18px 0;
+  }
 }

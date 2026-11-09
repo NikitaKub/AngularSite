@@ -1,0 +1,121 @@
+.promo_sector_container {
+    margin-top: 25px;
+    padding: 0 10px;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+
+    /* ================= КАТАЛОГ ЗЛІВА (БЕЗ СКРОЛУ) ================= */
+    .catalog_container {
+        flex: 0 0 330px;
+        /* Висота ідеально відповідає правому блоку: слайдер (410px) + відступ (15px) + кнопки (52px) = ~477px */
+        height: 480px; 
+        background-color: #ffffff;
+        border-top: solid #ff4400 6px; /* Твоя фірмова лінія */
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        padding: 8px 0;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Рівномірно розподіляє категорії по всій висоті */
+        overflow: hidden; /* Жодного скролу */
+        box-sizing: border-box;
+
+        .category {
+            flex: 1; /* Кожна категорія займає однакову висоту */
+            text-decoration: none;
+            color: #334155;
+            font-size: 13.5px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 18px;
+            border-left: 3px solid transparent;
+            transition: all 0.15s ease;
+
+            .cat_name {
+                margin: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            svg {
+                height: 14px;
+                width: 14px;
+                flex-shrink: 0;
+                color: #cbd5e1;
+                transition: color 0.15s ease, transform 0.15s ease;
+            }
+
+            &:hover {
+                background-color: #f8fafc;
+                color: #134e8e; /* Твій синій */
+                border-left-color: #134e8e;
+                padding-left: 22px; /* Легкий ефект зсуву */
+
+                svg {
+                    color: #134e8e;
+                    transform: translateX(2px);
+                }
+            }
+        }
+    }
+
+    /* ================= ПРОМО СПРАВА ================= */
+    .promo_container {
+        flex: 1;
+        min-width: 0;
+        height: 480px; /* Така сама висота, як і в каталогу */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .promos_container {
+            display: flex;
+            gap: 15px;
+            height: 52px;
+
+            .promo {
+                flex: 1;
+                height: 100%;
+                background-color: #ffb33f;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                text-decoration: none;
+                color: #0f172a;
+                font-size: 14px;
+                font-weight: 700;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+                transition: all 0.2s ease;
+                white-space: nowrap;
+                padding: 0 8px;
+
+                svg {
+                    height: 16px;
+                    width: 16px;
+                    flex-shrink: 0;
+                    color: #0f172a;
+                    transition: color 0.2s ease;
+                }
+
+                &:hover {
+                    background-color: #ff4400;
+                    color: #ffffff;
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 12px rgba(255, 68, 0, 0.25);
+
+                    svg {
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}

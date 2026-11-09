@@ -1,10 +1,10 @@
 <div class="slider-wrapper">
     <div class="slider-container">
         <div class="slides-track" [style.transform]="'translateX(' + (-currentIndex * 100) + '%)'">
-            @for (slide of promoSlidesList; track slide.id) {
-            <div class="slide">
-                <img [src]="slide.path" [alt]="slide.alt">
-            </div>
+            @for (slide of promoSlidesList; track slide.path) {
+                <div class="slide">
+                    <img [src]="slide.path" [alt]="slide.alt">
+                </div>
             }
         </div>
 
@@ -12,8 +12,12 @@
         <button class="nav-btn next" (click)="next()">&#10095;</button>
 
         <div class="indicators">
-            @for (slide of promoSlidesList; track slide.id) {
-                <span class="dot" [class.active]="slide.id === currentIndex" (click)="goToSlide(slide.id)"></span>
+            @for (slide of promoSlidesList; track $index) {
+                <span 
+                    class="dot" 
+                    [class.active]="$index === currentIndex" 
+                    (click)="goToSlide($index)">
+                </span>
             }
         </div>
     </div>

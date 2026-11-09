@@ -1,0 +1,148 @@
+.car_choose_sector_container {
+    margin-top: 50px;
+    padding: 0 10px;
+}
+
+.car_choose_container {
+    width: 100%;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.car_choose_left_container {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    border-radius: 15px 0 0 15px;
+    background-color: #134e8e4a;
+
+    .decoration {
+        height: 50px;
+        width: auto;
+        margin: auto 0;
+        margin-left: 20px;
+        flex-shrink: 0;
+
+        path {
+            fill: #185fac;
+        }
+    }
+}
+
+.car_choose_info {
+    padding: 20px 25px;
+    flex: 1;
+    
+    h3 {
+        margin: 0 0 10px 0;
+        padding-left: 0;
+        font-size: 19px;
+        color: #0f2c4f;
+    }
+
+    .main {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+        color: #334155;
+    }
+}
+
+.car_choose_right_container {
+    flex: 0 0 360px;
+    padding: 10px;
+    border-radius: 0 15px 15px 0;
+    background-color: #134e8e;
+    display: flex;
+}
+
+.car_choose_panel {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.car_choose_status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    p {
+        margin: 0;
+        font-size: 15px;
+        font-weight: bold;
+        color: #1e293b;
+    }
+    
+    .status_dot {
+        width: 9px;
+        height: 9px;
+        background-color: #ffb33f;
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px rgba(255, 179, 63, 0.25);
+    }
+}
+
+.car_choose_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px 0;
+
+    img {
+        width: auto;
+        height: 75px;
+        object-fit: contain;
+    }
+}
+
+.car_choose_button {
+    background-color: #134e8e;
+    border: 0;
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+
+    svg {
+        height: 20px;
+        width: auto;
+        transition: transform 0.2s ease;
+
+        path {
+            fill: #f0f0f0;
+        }
+    }
+
+    &:hover {
+        background-color: #185fac;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+        svg {
+            transform: scale(1.1);
+        }
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}

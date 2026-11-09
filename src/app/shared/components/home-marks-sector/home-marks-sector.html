@@ -1,0 +1,21 @@
+<div class="car_marks_sector_container">
+    <h2 class="sector_container_header">Автозапчастини для відомих брендів</h2>
+    <div class="car_marks_container">
+        <div class="car_marks_main">
+            @for (mark of (isExpanded ? car_marks : (car_marks | slice:0:12)); track mark.name){
+                <a href="#" class="mark_container">
+                    <div class="logo-wrapper">
+                        <img [src]="mark.path" [alt]="mark.name">
+                    </div>
+                    <span class="mark-name">{{ mark.name }}</span>
+                </a>
+            }
+        </div>
+        @if (car_marks.length > 12) {
+            <div class="expand_toggle_bar" (click)="toggleExpand()">
+                <span>{{ isExpanded ? 'Згорнути' : 'Показати всі бренди' }}</span>
+                <span class="arrow" [class.rotated]="isExpanded">▼</span>
+            </div>
+        }
+    </div>
+</div>

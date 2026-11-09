@@ -1,0 +1,18 @@
+<div class="autoparts_marks_sector_container">
+    <h2 class="sector_container_header"> Виробники автозапчастин </h2>
+    <div class="autoparts_marks_container">
+        <div class="autoparts_marks_main">
+            @for (mark of (isExpanded ? autoparts_marks : (autoparts_marks | slice:0:20)); track mark.name){
+                <a href="#" class="mark_container">
+                    <span class="mark-name">{{ mark.name }}</span>
+                </a>
+            }
+        </div>
+        @if (autoparts_marks.length > 20) {
+            <div class="expand_toggle_bar" (click)="toggleExpand()">
+                <span>{{ isExpanded ? 'Згорнути' : 'Показати всі бренди' }}</span>
+                <span class="arrow" [class.rotated]="isExpanded">▼</span>
+            </div>
+        }
+    </div>
+</div>
