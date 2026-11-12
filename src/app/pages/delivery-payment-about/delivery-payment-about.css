@@ -5,7 +5,6 @@
   padding: 0 10px;
 }
 
-/* ================= СІТКА СПОСОБІВ (ДОСТАВКА / ОПЛАТА) ================= */
 .methods_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -14,7 +13,7 @@
 
   .method_box {
     background: #fbfbfb;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #eeeeee;
     border-radius: 10px;
     padding: 20px 22px;
     display: flex;
@@ -22,25 +21,31 @@
 
     .box_header {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       margin-bottom: 10px;
 
-      .method_icon {
-        svg {
-          color: #ff4400;
-          display: block;
-          flex-shrink: 0;
-          height: 30px;
-          width: 30px;
-        }
+      svg {
+        color: #ff4400;
+        display: block;
+        flex-shrink: 0;
+        height: 30px;
+        width: 30px;
       }
+    }
+
+    .box_footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px dashed #e2e8f0;
+      padding-top: 8px;
 
       .price_tag {
         font-size: 11.5px;
         font-weight: 700;
         background: #e2e8f0;
-        color: #475569;
+        color: #4b5563;
         padding: 3px 8px;
         border-radius: 6px;
       }
@@ -55,21 +60,49 @@
 
     .method_desc {
       font-size: 13.5px;
-      color: #64748b;
+      color: #4b5563;
       line-height: 1.45;
-      margin: 0 0 14px 0;
+      margin: 0;
       flex-grow: 1;
+    }
+    
+    .pay_options_block {
+      background: #f1f5f9;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+
+      .method_pay_vars_label {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #64748b;
+        margin: 0 0 8px 0;
+        display: block;
+      }
+
+      .method_pay_chips {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .pay_chip {
+          font-size: 13px;
+          font-weight: 600;
+          color: #1e293b;
+        }
+      }
     }
 
     .term_row {
       display: flex;
       gap: 6px;
       font-size: 12.5px;
-      border-top: 1px dashed #e2e8f0;
-      padding-top: 8px;
 
       .term_label {
-        color: #94a3b8;
+        color: #4b5563;
       }
       .term_val {
         color: #134e8e;
@@ -77,21 +110,11 @@
       }
     }
   }
-
-  /* Особливість блоку оплати */
-  &.payment_grid {
-    .payment_box {
-      .method_icon {
-        font-size: 26px;
-        margin-bottom: 8px;
-      }
-    }
-  }
 }
 
 /* ================= CTA НИЖНЯ ПАНЕЛЬ ================= */
 .footer_actions {
-  border-top: 1px dashed #cbd5e1;
+  border-top: 1px dashed #e2e8f0;
   padding-top: 25px;
   display: flex;
   justify-content: space-between;
@@ -103,12 +126,11 @@
       font-size: 15px;
       color: #0f172a;
       display: block;
-      margin-bottom: 3px;
     }
     p {
       margin: 0;
       font-size: 13px;
-      color: #64748b;
+      color: #4b5563;
     }
   }
 
@@ -129,6 +151,15 @@
     .btn_phone {
       background-color: #134e8e;
       color: #ffffff;
+      display: flex;
+      gap: 5px;
+
+      svg {
+        display: block;
+        flex-shrink: 0;
+        height: 14px;
+        width: 14px;
+      }
 
       &:hover {
         background-color: #185fac;
@@ -137,9 +168,9 @@
     }
 
     .btn_catalog {
-      background-color: #f1f5f9;
-      color: #334155;
-      border: 1px solid #cbd5e1;
+      background-color: #fbfbfb;
+      color: #0f172a;
+      border: 1px solid #eeeeee;
 
       &:hover {
         background-color: #e2e8f0;

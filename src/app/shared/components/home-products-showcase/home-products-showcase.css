@@ -63,6 +63,9 @@
                         color: #16a34a;
                         font-weight: 700;
                     }
+                    .stock_badge.out_of_stock {
+                        color: #dc2626;
+                    }
 
                     .product_code {
                         color: #94a3b8;
@@ -176,6 +179,10 @@
                         &:active {
                             transform: translateY(0);
                         }
+                    }
+                    .product_buy_button:disabled {
+                        background-color: #cbd5e1;
+                        cursor: not-allowed;
                     }
                 }
 

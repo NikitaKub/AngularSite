@@ -1,114 +1,110 @@
-.policy_page {
-  padding: 30px 0 60px 0;
+.privacy_page {
   font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
-  color: #1e293b;
+  color: #3a3a3a;
+  width: 100%;
+  padding: 0 10px;
 }
 
-.wrapper {
-  max-width: 1100px; /* Для тексту найкраще вужча ширина для читабельності */
-  margin: 0 auto;
-  padding: 0 15px;
+.info_section {
+  margin-bottom: 35px;
 }
 
-.policy_header {
-  margin-bottom: 25px;
+.section_title_wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
 
-  h1 {
-    font-size: 28px;
-    font-weight: 800;
-    color: #134e8e; /* Твій синій */
-    margin: 0 0 8px 0;
+  .accent_bar {
+    width: 4px;
+    height: 22px;
+    background-color: #ff4400;
+    border-radius: 2px;
   }
 
-  .subtitle {
-    font-size: 15px;
-    color: #64748b;
+  .sector_sub_header {
     margin: 0;
+    font-size: 21px;
+    font-weight: 800;
+    color: #134e8e;
   }
 }
 
-.policy_card {
-  background-color: #ffffff;
-  border-top: solid #ff4400 5px; /* Твій фірмовий оранжевий акцент */
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  padding: 35px 40px;
+.methods_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 
-  .policy_section {
-    margin-bottom: 30px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid #f1f5f9;
+  .method_box {
+    background: #fbfbfb;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s ease;
 
-    &:last-of-type {
-      border-bottom: none;
-      margin-bottom: 15px;
+    &:hover {
+      background: #ffffff;
+      border-color: #134e8e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(19, 78, 142, 0.08);
     }
 
-    h2 {
-      font-size: 19px;
+    h4 {
+      margin: 0 0 10px 0;
+      font-size: 16.5px;
       font-weight: 700;
       color: #0f172a;
-      margin: 0 0 12px 0;
     }
 
-    p {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #334155;
-      margin: 0 0 10px 0;
-    }
-
-    .rule_list {
-      margin: 10px 0 15px 20px;
-      padding: 0;
-
-      li {
-        font-size: 14.5px;
-        line-height: 1.6;
-        color: #475569;
-        margin-bottom: 6px;
-      }
-    }
-
-    .warning_box {
-      background-color: #fffbeb;
-      border-left: 4px solid #ffb33f;
-      padding: 12px 16px;
-      border-radius: 0 8px 8px 0;
-      font-size: 13.5px;
-      line-height: 1.5;
-      color: #92400e;
-      margin-top: 12px;
+    .method_desc {
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.55;
+      margin: 0;
     }
   }
+}
 
-  .policy_footer_contacts {
-    background: #f8fafc;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    border: 1px dashed #cbd5e1;
+.footer_actions {
+  border-top: 1px dashed #cbd5e1;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 
-    p {
-      margin: 0 0 10px 0;
+  .call_us_text {
+    strong { font-size: 16px; color: #0f172a; display: block; margin-bottom: 4px; }
+    p { margin: 0; font-size: 13.5px; color: #64748b; }
+  }
+
+  .action_buttons {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+
+    a {
+      text-decoration: none;
       font-size: 14px;
-      color: #475569;
+      font-weight: 700;
+      padding: 11px 22px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
     }
 
-    .contact_btn {
-      display: inline-block;
+    .btn_phone {
       background-color: #134e8e;
       color: #ffffff;
-      text-decoration: none;
-      padding: 8px 20px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 14px;
-      transition: background 0.2s;
+      &:hover { background-color: #185fac; transform: translateY(-1px); }
+    }
 
-      &:hover {
-        background-color: #185fac;
-      }
+    .btn_catalog {
+      background-color: #f8fafc;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+      &:hover { background-color: #e2e8f0; }
     }
   }
 }

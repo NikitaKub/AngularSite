@@ -1,94 +1,67 @@
 <main class="discounts_page">
-  <div class="wrapper">
+  <div class="page_title_sector">
+    <h1 class="main_header_title">Знижки та спеціальні пропозиції</h1>
+  </div>
+
+  <section class="section_card">
     
-    <!-- Шапка сторінки -->
-    <div class="page_header">
-      <div class="header_badge">Програма лояльності</div>
-      <h1 class="page_title">Знижки та спеціальні пропозиції</h1>
-      <p class="page_subtitle">
-        Купувати якісні запчастини в Inter Asia не лише надійно, але й вигідно. Дізнайтеся про діючі програми знижок для водіїв, військових та автомайстрів.
-      </p>
-    </div>
-
-    <div class="discounts_main_card">
-      
-      <!-- 1. Головні постійні програми знижок -->
-      <section class="programs_section">
-        <div class="section_title_row">
-          <span class="accent_bar"></span>
-          <h2>Постійні програми знижок</h2>
-        </div>
-
-        <div class="programs_grid">
-          @for (item of mainPrograms; track item.title) {
-            <div class="program_card">
-              <div class="card_top">
-                <span class="type_badge" [ngClass]="item.badgeClass">{{ item.badge }}</span>
-                <span class="percent_tag">{{ item.percent }}</span>
-              </div>
-              <div class="card_main_info">
-                <span class="prog_icon">{{ item.icon }}</span>
-                <h3>{{ item.title }}</h3>
-                <p class="prog_desc">{{ item.desc }}</p>
-              </div>
-              <div class="how_to_box">
-                <strong>Як отримати:</strong>
-                <p>{{ item.howToGet }}</p>
-              </div>
-            </div>
-          }
-        </div>
-      </section>
-
-      <!-- 2. Актуальні акції та вигідні комплекти -->
-      <section class="promos_section">
-        <div class="section_title_row">
-          <span class="accent_bar"></span>
-          <h2>Актуальні акції та спецпропозиції</h2>
-        </div>
-
-        <div class="promos_grid">
-          @for (promo of activePromos; track promo.title) {
-            <div class="promo_box">
-              <span class="promo_icon">{{ promo.icon }}</span>
-              <div class="promo_content">
-                <h4>{{ promo.title }}</h4>
-                <p>{{ promo.desc }}</p>
-              </div>
-            </div>
-          }
-        </div>
-      </section>
-
-      <!-- 3. Як працює нарахування знижки -->
-      <section class="rules_section">
-        <div class="rules_box">
-          <div class="rules_header">
-            <span class="info_icon">ℹ️</span>
-            <h3>Важлива інформація про застосування знижок</h3>
-          </div>
-          <ul class="rules_list">
-            <li>Знижки за різними програмами не сумуються (застосовується найбільша вигідна для клієнта знижка).</li>
-            <li>Знижки для військових діють як на замовлення з доставкою Новою Поштою, так і при самовивозі в Миколаєві.</li>
-            <li>Знижка не поширюється на вартість доставки поштовими службами.</li>
-            <li>На деякі рідкісні спецзамовлення діє індивідуальне узгодження ціни.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- 4. Нижній блок CTA -->
-      <div class="footer_cta_box">
-        <div class="cta_text">
-          <strong>Бажаєте дізнатися вашу персональну знижку?</strong>
-          <p>Зателефонуйте нашому менеджеру — ми перевіримо вашу історію замовлень за 30 секунд</p>
-        </div>
-        <div class="cta_buttons">
-          <a href="tel:0666481318" class="cta_phone_btn">📞 Дізнатися знижку: (066) 648-13-18</a>
-          <a routerLink="/" class="cta_catalog_btn">До каталогу товарів</a>
-        </div>
+    <!-- Постійні знижки -->
+    <div class="info_section">
+      <div class="section_title_wrap">
+        <span class="accent_bar"></span>
+        <h2 class="sector_sub_header">Постійні програми лояльності</h2>
       </div>
 
+      <div class="methods_grid">
+        @for (item of mainPrograms; track item.title) {
+          <div class="method_box">
+            <div class="box_header">
+              <span class="method_icon_text">{{ item.icon }}</span>
+              <span class="price_tag percent">{{ item.percent }}</span>
+            </div>
+            <h4>{{ item.title }}</h4>
+            <p class="method_desc">{{ item.desc }}</p>
+            
+            <div class="how_box">
+              <span class="how_label">Як отримати:</span>
+              <p class="how_text">{{ item.howToGet }}</p>
+            </div>
+          </div>
+        }
+      </div>
     </div>
 
-  </div>
+    <!-- Сезонні акції -->
+    <div class="info_section">
+      <div class="section_title_wrap">
+        <span class="accent_bar"></span>
+        <h2 class="sector_sub_header">Актуальні набори та акції</h2>
+      </div>
+
+      <div class="methods_grid promo_grid">
+        @for (promo of activePromos; track promo.title) {
+          <div class="method_box promo_box">
+            <div class="box_header">
+              <span class="method_icon_text">{{ promo.icon }}</span>
+              <span class="price_tag save">Вигідно</span>
+            </div>
+            <h4>{{ promo.title }}</h4>
+            <p class="method_desc">{{ promo.desc }}</p>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="footer_actions">
+      <div class="call_us_text">
+        <strong>Бажаєте дізнатися вашу персональну знижку за номером?</strong>
+        <p>Менеджер перевірить історію ваших покупок за 30 секунд</p>
+      </div>
+      <div class="action_buttons">
+        <a href="tel:0666481318" class="btn_phone">📞 (066) 648-13-18</a>
+        <a routerLink="/" class="btn_catalog">Перейти до каталогу</a>
+      </div>
+    </div>
+
+  </section>
 </main>

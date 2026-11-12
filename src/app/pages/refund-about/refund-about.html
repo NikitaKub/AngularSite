@@ -1,148 +1,85 @@
-<main class="returns_page">
-  <div class="wrapper">
+<main class="refund_page">
+  <div class="page_title_sector">
+    <h1 class="main_header_title">Повернення та обмін товару</h1>
+  </div>
+
+  <section class="section_card">
     
-    <!-- Шапка сторінки -->
-    <div class="page_header">
-      <div class="header_badge">Гарантія та сервіс</div>
-      <h1 class="page_title">Умови повернення та обміну товару</h1>
-      <p class="page_subtitle">
-        Ми гарантуємо прозорі та законні умови повернення автозапчастин протягом 14 днів відповідно до законодавства України.
+    <!-- 14 днів закон -->
+    <div class="info_section">
+      <div class="section_title_wrap">
+        <span class="accent_bar"></span>
+        <h2 class="sector_sub_header">Гарантовані 14 днів на повернення</h2>
+      </div>
+      <p class="section_text">
+        Згідно із Законом України «Про захист прав споживачів», ви маєте право обміняти або повернути деталь належної якості протягом <strong>14 календарних днів</strong> з моменту отримання на Новій Пошті або самовивозу зі складу в Миколаєві.
       </p>
     </div>
 
-    <!-- Основний блок із картками -->
-    <div class="returns_card_container">
-      
-      <!-- 1. Головне правило 14 днів -->
-      <section class="info_block">
-        <div class="block_title">
-          <span class="accent_bar"></span>
-          <h2>14 днів на повернення або обмін</h2>
-        </div>
-        <p class="text_content">
-          Згідно із Законом України <em>«Про захист прав споживачів»</em>, ви маєте право обміняти або повернути товар належної якості, придбаний у магазині <strong>Inter Asia</strong>, протягом <strong>14 календарних днів</strong> з дня фактичного отримання посилки на Новій Пошті або самовивозу зі складу.
-        </p>
-      </section>
-
-      <!-- 2. Умови успішного повернення (Зелений блок) -->
-      <section class="conditions_section">
-        <h3>Товар підлягає поверненню, якщо:</h3>
-        <div class="conditions_grid">
-          <div class="cond_card success">
-            <span class="cond_icon">📦</span>
-            <div>
-              <strong>Цілісність упаковки</strong>
-              <p>Збережено оригінальну коробку виробника, штрихкоди, маркування та захисні пломби.</p>
-            </div>
-          </div>
-
-          <div class="cond_card success">
-            <span class="cond_icon">✨</span>
-            <div>
-              <strong>Відсутність слідів монтажу</strong>
-              <p>Деталь не встановлювалася на автомобіль, немає слідів затискання болтів, подряпин, мастила чи бруду.</p>
-            </div>
-          </div>
-
-          <div class="cond_card success">
-            <span class="cond_icon">🧾</span>
-            <div>
-              <strong>Збережено комплектацію</strong>
-              <p>Усі супутні елементи (шайби, прокладки, кріплення, інструкції) є в наявності в повному обсязі.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 3. Що НЕ підлягає поверненню (Важливе застереження) -->
-      <section class="warning_section">
-        <div class="warning_box">
-          <div class="warn_header">
-            <span class="warn_icon">⚠️</span>
-            <h4>Зверніть увагу! Не підлягають поверненню:</h4>
-          </div>
-          <ul class="warn_list">
-            <li><strong>Електричні автозапчастини зі слідами підключення:</strong> датчики, котушки запалювання, свічки, реле, електронні блоки управління (ЕБУ).</li>
-            <li><strong>Технічні рідини та автохімія:</strong> моторні й трансмісійні оливи, гальмівні рідини, антифризи із зірваною заводською пломбою чи мембраною.</li>
-            <li><strong>Деталі зі слідами встановлення:</strong> якщо на різьбі є сліди вкручування або на сайлентблоках сліди запресовки.</li>
-            <li><strong>Спецзамовлення:</strong> рідкісні позиції, які замовлялися індивідуально за кордоном під конкретний автомобіль клієнта.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- 4. Покроковий процес: Як зробити повернення -->
-      <section class="steps_section">
-        <div class="block_title">
-          <span class="accent_bar"></span>
-          <h2>Як оформити повернення: 4 прості кроки</h2>
-        </div>
-
-        <div class="steps_grid">
-          @for (item of returnSteps; track item.step) {
-            <div class="step_card">
-              <span class="step_num">{{ item.step }}</span>
-              <h4>{{ item.title }}</h4>
-              <p>{{ item.desc }}</p>
-            </div>
-          }
-        </div>
-      </section>
-
-      <!-- 5. Хто оплачує доставку та реквізити -->
-      <section class="shipping_terms_section">
-        <div class="block_title">
-          <span class="accent_bar"></span>
-          <h2>Оплата доставки при поверненні</h2>
-        </div>
-        
-        <div class="shipping_split">
-          <div class="ship_card client_pays">
-            <span class="ship_badge">Оплачує покупець</span>
-            <p>Якщо деталь не підійшла, помилилися при виборі самостійно або відпала потреба в ремонті.</p>
-          </div>
-
-          <div class="ship_card store_pays">
-            <span class="ship_badge store">Оплачує Inter Asia</span>
-            <p>Якщо сталася помилка з нашого боку (надіслали не той артикул), або виявлено документально підтверджений заводський брак.</p>
-          </div>
-        </div>
-
-        <!-- Контактний блок для відправки -->
-        <div class="dispatch_info_box">
-          <h4>📍 Дані для відправки повернення Новою Поштою:</h4>
-          <p><strong>Одержувач:</strong> Магазин автозапчастин Inter Asia</p>
-          <p><strong>Місто:</strong> м. Миколаїв, Відділення Нової Пошти №...</p>
-          <p><strong>Телефон:</strong> (066) 648-13-18</p>
-          <small class="dispatch_note">* Увага! Відправки надсилаються БЕЗ післяплати. Посилки з післяплатою склад не забирає.</small>
-        </div>
-      </section>
-
-      <!-- 6. Гарантійні випадки (Рекламація) -->
-      <section class="warranty_section">
-        <div class="block_title">
-          <span class="accent_bar"></span>
-          <h2>Гарантійні випадки (Заводський брак)</h2>
-        </div>
-        <p class="text_content">
-          Якщо несправність деталі виявилася в процесі експлуатації протягом гарантійного терміну, заміна або повернення коштів відбувається за наявності документів від СТО:
-        </p>
-        <ul class="doc_list">
-          <li>Заказ-наряд СТО на встановлення деталі з датою, пробігом і VIN-кодом авто;</li>
-          <li>Акт рекламації (дефектовки) від автосервісу з описом несправності;</li>
-          <li>Сертифікат або ліцензія СТО на право виконання відповідних робіт.</li>
-        </ul>
-      </section>
-
-      <!-- Швидкий зв'язок -->
-      <div class="returns_cta_footer">
-        <p>Залишилися питання щодо повернення або обміну?</p>
-        <div class="cta_btns">
-          <a href="tel:0666481318" class="cta_phone_btn">📞 Зателефонувати: (066) 648-13-18</a>
-          <a routerLink="/" class="cta_home_btn">Повернутися до покупок</a>
-        </div>
+    <!-- Умови -->
+    <div class="info_section">
+      <div class="section_title_wrap">
+        <span class="accent_bar"></span>
+        <h2 class="sector_sub_header">Умови для повернення</h2>
       </div>
 
+      <div class="methods_grid conditions_grid">
+        @for (cond of returnConditions; track cond.title) {
+          <div class="method_box">
+            <div class="box_header">
+              <span class="method_icon_text">{{ cond.icon }}</span>
+              <span class="price_tag free">Обов'язково</span>
+            </div>
+            <h4>{{ cond.title }}</h4>
+            <p class="method_desc">{{ cond.desc }}</p>
+          </div>
+        }
+      </div>
     </div>
 
-  </div>
+    <!-- Що не підлягає поверненню -->
+    <div class="warning_box">
+      <div class="warn_header">
+        <span class="warn_icon">⚠️</span>
+        <h4>Не підлягають поверненню:</h4>
+      </div>
+      <ul class="warn_list">
+        <li><strong>Електричні автозапчастини зі слідами підключення:</strong> датчики, котушки, свічки, електронні блоки (ЕБУ).</li>
+        <li><strong>Технічні рідини та автохімія:</strong> оливи й антифризи із зірваною захисною пломбою.</li>
+        <li><strong>Деталі зі слідами монтажу:</strong> запчастини зі слідами закручування болтів, запресовки чи мастила.</li>
+      </ul>
+    </div>
+
+    <!-- 4 кроки -->
+    <div class="info_section">
+      <div class="section_title_wrap">
+        <span class="accent_bar"></span>
+        <h2 class="sector_sub_header">Порядок повернення: 4 прості кроки</h2>
+      </div>
+
+      <div class="methods_grid steps_grid">
+        @for (item of returnSteps; track item.step) {
+          <div class="method_box step_box">
+            <div class="step_header">
+              <span class="step_num">{{ item.step }}</span>
+            </div>
+            <h4>{{ item.title }}</h4>
+            <p class="method_desc">{{ item.desc }}</p>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="footer_actions">
+      <div class="call_us_text">
+        <strong>Бажаєте оформити повернення або є питання щодо деталі?</strong>
+        <p>Зателефонуйте менеджеру для узгодження даних відправки</p>
+      </div>
+      <div class="action_buttons">
+        <a href="tel:0666481318" class="btn_phone">📞 (066) 648-13-18</a>
+        <a routerLink="/" class="btn_catalog">Перейти до каталогу</a>
+      </div>
+    </div>
+
+  </section>
 </main>

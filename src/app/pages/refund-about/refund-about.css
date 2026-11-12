@@ -1,65 +1,26 @@
-.returns_page {
-  padding: 30px 0 70px 0;
+.refund_page {
   font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
-  color: #1e293b;
-}
-
-.wrapper {
-  max-width: 1140px;
+  color: #3a3a3a;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-  box-sizing: border-box;
+  padding: 0 10px;
 }
 
-/* ================= ШАПКА ================= */
-.page_header {
-  margin-bottom: 30px;
-
-  .header_badge {
-    display: inline-block;
-    background-color: #134e8e;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 3px 12px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-  }
-
-  .page_title {
-    font-size: 30px;
-    font-weight: 800;
-    color: #0f172a;
-    margin: 0 0 10px 0;
-  }
-
-  .page_subtitle {
-    font-size: 15.5px;
-    color: #64748b;
-    line-height: 1.5;
-    margin: 0;
-    max-width: 780px;
-  }
+.info_section {
+  margin-bottom: 35px;
 }
 
-/* ================= ГОЛОВНА КАРТКА ================= */
-.returns_card_container {
-  background-color: #ffffff;
-  border-top: solid #ff4400 5px; /* Твій фірмовий стиль */
-  border-radius: 0 0 14px 14px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-  padding: 35px 40px;
+.section_text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0;
 }
 
-/* Заголовки блоків з помаранчевою рискою */
-.block_title {
+.section_title_wrap {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 
   .accent_bar {
     width: 4px;
@@ -68,305 +29,140 @@
     border-radius: 2px;
   }
 
-  h2 {
-    font-size: 20px;
-    font-weight: 800;
-    color: #134e8e; /* Твій синій */
+  .sector_sub_header {
     margin: 0;
+    font-size: 21px;
+    font-weight: 800;
+    color: #134e8e;
   }
 }
 
-.text_content {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #334155;
-  margin: 0 0 25px 0;
+.methods_grid {
+  display: grid;
+  gap: 20px;
 
-  strong {
-    color: #0f172a;
-  }
-}
+  &.conditions_grid { grid-template-columns: repeat(3, 1fr); }
+  &.steps_grid { grid-template-columns: repeat(4, 1fr); }
 
-/* ================= 2. УМОВИ (ЗЕЛЕНІ КАРТКИ) ================= */
-.conditions_section {
-  margin-bottom: 30px;
+  .method_box {
+    background: #fbfbfb;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s ease;
 
-  h3 {
-    font-size: 16px;
-    font-weight: 700;
-    color: #0f172a;
-    margin: 0 0 14px 0;
-  }
-
-  .conditions_grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-
-    .cond_card {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      padding: 18px 16px;
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-
-      .cond_icon {
-        font-size: 22px;
-        line-height: 1;
-      }
-
-      strong {
-        font-size: 14.5px;
-        color: #0f172a;
-        display: block;
-        margin-bottom: 4px;
-      }
-
-      p {
-        font-size: 13px;
-        color: #64748b;
-        line-height: 1.45;
-        margin: 0;
-      }
+    &:hover {
+      background: #ffffff;
+      border-color: #134e8e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(19, 78, 142, 0.08);
     }
-  }
-}
 
-/* ================= 3. ПОПЕРЕДЖЕННЯ (НЕ ПІДЛЯГАЄ) ================= */
-.warning_section {
-  margin-bottom: 35px;
-
-  .warning_box {
-    background-color: #fffbeb;
-    border: 1px solid #fde68a;
-    border-left: 5px solid #f59e0b; /* Янтарний акцент */
-    border-radius: 0 10px 10px 0;
-    padding: 20px 22px;
-
-    .warn_header {
+    .box_header {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 8px;
       margin-bottom: 12px;
 
-      .warn_icon {
-        font-size: 20px;
-      }
-
-      h4 {
-        font-size: 16px;
-        font-weight: 800;
-        color: #92400e;
-        margin: 0;
-      }
+      .method_icon_text { font-size: 24px; }
+      .price_tag.free { background: #dcfce7; color: #15803d; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 6px; }
     }
 
-    .warn_list {
-      margin: 0 0 0 18px;
-      padding: 0;
-
-      li {
-        font-size: 13.5px;
-        line-height: 1.55;
-        color: #78350f;
-        margin-bottom: 6px;
-
-        strong {
-          color: #92400e;
-        }
-      }
-    }
-  }
-}
-
-/* ================= 4. ПОКРОКОВІ КРОКИ ================= */
-.steps_section {
-  margin-bottom: 35px;
-
-  .steps_grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin-top: 15px;
-
-    .step_card {
-      background: #fbfbfb;
-      border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      padding: 20px 16px;
-      position: relative;
-      transition: all 0.2s ease;
-
-      &:hover {
-        border-color: #134e8e;
-        transform: translateY(-2px);
-      }
-
+    .step_header {
+      margin-bottom: 8px;
       .step_num {
-        font-size: 26px;
+        font-size: 24px;
         font-weight: 900;
-        color: #ff4400; /* Твій помаранчевий */
-        opacity: 0.4;
-        display: block;
-        margin-bottom: 6px;
-      }
-
-      h4 {
-        margin: 0 0 6px 0;
-        font-size: 15px;
-        font-weight: 700;
-        color: #0f172a;
-      }
-
-      p {
-        margin: 0;
-        font-size: 12.5px;
-        color: #64748b;
-        line-height: 1.45;
+        color: #ff4400;
+        opacity: 0.5;
       }
     }
-  }
-}
-
-/* ================= 5. ОПЛАТА ДОСТАВКИ ================= */
-.shipping_terms_section {
-  margin-bottom: 35px;
-
-  .shipping_split {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-
-    .ship_card {
-      flex: 1;
-      padding: 16px 20px;
-      border-radius: 10px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-
-      .ship_badge {
-        display: inline-block;
-        font-size: 11.5px;
-        font-weight: 800;
-        text-transform: uppercase;
-        padding: 2px 8px;
-        border-radius: 6px;
-        background: #e2e8f0;
-        color: #475569;
-        margin-bottom: 8px;
-
-        &.store {
-          background: #dcfce7;
-          color: #166534;
-        }
-      }
-
-      p {
-        margin: 0;
-        font-size: 13.5px;
-        color: #334155;
-        line-height: 1.45;
-      }
-    }
-  }
-
-  .dispatch_info_box {
-    background: #f0f7ff;
-    border: 1px solid #bfdbfe;
-    border-radius: 10px;
-    padding: 18px 22px;
 
     h4 {
-      margin: 0 0 10px 0;
-      font-size: 15px;
-      color: #134e8e;
-      font-weight: 800;
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
     }
 
-    p {
-      margin: 0 0 4px 0;
+    .method_desc {
       font-size: 13.5px;
-      color: #1e293b;
-
-      strong {
-        color: #0f172a;
-      }
-    }
-
-    .dispatch_note {
-      display: block;
-      margin-top: 8px;
-      font-size: 12px;
-      color: #dc2626;
-      font-weight: 600;
+      color: #4b5563;
+      line-height: 1.45;
+      margin: 0;
     }
   }
 }
 
-/* ================= 6. ГАРАНТІЯ / РЕКЛАМАЦІЯ ================= */
-.warranty_section {
+.warning_box {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 5px solid #f59e0b;
+  border-radius: 0 10px 10px 0;
+  padding: 18px 22px;
   margin-bottom: 35px;
 
-  .doc_list {
-    margin: 10px 0 0 18px;
-    padding: 0;
+  .warn_header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    .warn_icon { font-size: 20px; }
+    h4 { margin: 0; font-size: 16px; font-weight: 800; color: #92400e; }
+  }
 
+  .warn_list {
+    margin: 0 0 0 18px;
+    padding: 0;
     li {
-      font-size: 14px;
-      color: #475569;
+      font-size: 13.5px;
       line-height: 1.5;
+      color: #78350f;
       margin-bottom: 6px;
     }
   }
 }
 
-/* ================= CTA FOOTER ================= */
-.returns_cta_footer {
+.footer_actions {
   border-top: 1px dashed #cbd5e1;
   padding-top: 25px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 
-  p {
-    margin: 0 0 15px 0;
-    font-size: 15px;
-    font-weight: 600;
-    color: #334155;
+  .call_us_text {
+    strong { font-size: 16px; color: #0f172a; display: block; margin-bottom: 4px; }
+    p { margin: 0; font-size: 13.5px; color: #64748b; }
   }
 
-  .cta_btns {
+  .action_buttons {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    gap: 12px;
+    flex-shrink: 0;
 
     a {
       text-decoration: none;
       font-size: 14px;
       font-weight: 700;
-      padding: 10px 22px;
+      padding: 11px 22px;
       border-radius: 8px;
       transition: all 0.2s ease;
     }
 
-    .cta_phone_btn {
+    .btn_phone {
       background-color: #134e8e;
       color: #ffffff;
-
-      &:hover {
-        background-color: #185fac;
-        transform: translateY(-1px);
-      }
+      &:hover { background-color: #185fac; transform: translateY(-1px); }
     }
 
-    .cta_home_btn {
-      background-color: #f1f5f9;
+    .btn_catalog {
+      background-color: #f8fafc;
       color: #334155;
       border: 1px solid #cbd5e1;
-
-      &:hover {
-        background-color: #e2e8f0;
-      }
+      &:hover { background-color: #e2e8f0; }
     }
   }
 }

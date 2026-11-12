@@ -157,23 +157,3 @@ footer {
         margin: 0;
     }
 }
-
-@media (max-width: 1024px) {
-    .footer_container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-    }
-}
-
-@media (max-width: 600px) {
-    .footer_container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .bottom_content {
-        flex-direction: column;
-        text-align: center;
-        gap: 8px;
-    }
-}

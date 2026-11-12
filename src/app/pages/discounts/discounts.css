@@ -1,65 +1,19 @@
 .discounts_page {
-  padding: 30px 0 70px 0;
   font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
-  color: #1e293b;
-}
-
-.wrapper {
-  max-width: 1140px;
+  color: #3a3a3a;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-  box-sizing: border-box;
+  padding: 0 10px;
 }
 
-/* ================= ШАПКА ================= */
-.page_header {
-  margin-bottom: 30px;
-
-  .header_badge {
-    display: inline-block;
-    background-color: #134e8e;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 3px 12px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-  }
-
-  .page_title {
-    font-size: 30px;
-    font-weight: 800;
-    color: #0f172a;
-    margin: 0 0 10px 0;
-  }
-
-  .page_subtitle {
-    font-size: 15.5px;
-    color: #64748b;
-    line-height: 1.5;
-    margin: 0;
-    max-width: 800px;
-  }
+.info_section {
+  margin-bottom: 35px;
 }
 
-/* ================= ГОЛОВНА КАРТКА ================= */
-.discounts_main_card {
-  background-color: #ffffff;
-  border-top: solid #ff4400 5px; /* Твій фірмовий стиль */
-  border-radius: 0 0 14px 14px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-  padding: 35px 40px;
-}
-
-/* Заголовки розділів */
-.section_title_row {
+.section_title_wrap {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 
   .accent_bar {
     width: 4px;
@@ -68,205 +22,96 @@
     border-radius: 2px;
   }
 
-  h2 {
+  .sector_sub_header {
+    margin: 0;
     font-size: 21px;
     font-weight: 800;
     color: #134e8e;
-    margin: 0;
   }
 }
 
-/* ================= 1. ПОСТІЙНІ ПРОГРАМИ ================= */
-.programs_section {
-  margin-bottom: 40px;
+.methods_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 
-  .programs_grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  .method_box {
+    background: #fbfbfb;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s ease;
 
-    .program_card {
-      background: #fbfbfb;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 22px 20px;
+    &:hover {
+      background: #ffffff;
+      border-color: #134e8e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(19, 78, 142, 0.08);
+    }
+
+    .box_header {
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
-      transition: all 0.25s ease;
-
-      &:hover {
-        background: #ffffff;
-        border-color: #134e8e;
-        transform: translateY(-3px);
-        box-shadow: 0 8px 18px rgba(19, 78, 142, 0.1);
-      }
-
-      .card_top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 14px;
-
-        .type_badge {
-          font-size: 11px;
-          font-weight: 800;
-          padding: 3px 8px;
-          border-radius: 6px;
-          text-transform: uppercase;
-
-          &.army { background: #dcfce7; color: #15803d; }
-          &.loyalty { background: #fef3c7; color: #b45309; }
-          &.b2b { background: #e0e7ff; color: #4338ca; }
-        }
-
-        .percent_tag {
-          font-size: 18px;
-          font-weight: 900;
-          color: #ff4400; /* Твій помаранчевий */
-        }
-      }
-
-      .card_main_info {
-        flex-grow: 1;
-
-        .prog_icon {
-          font-size: 28px;
-          display: block;
-          margin-bottom: 8px;
-        }
-
-        h3 {
-          margin: 0 0 8px 0;
-          font-size: 16px;
-          font-weight: 800;
-          color: #0f172a;
-          line-height: 1.35;
-        }
-
-        .prog_desc {
-          margin: 0 0 16px 0;
-          font-size: 13.5px;
-          color: #475569;
-          line-height: 1.45;
-        }
-      }
-
-      .how_to_box {
-        background: #f1f5f9;
-        border-radius: 8px;
-        padding: 10px 12px;
-        border-left: 3px solid #134e8e;
-
-        strong {
-          font-size: 12px;
-          color: #0f172a;
-          display: block;
-          margin-bottom: 2px;
-        }
-
-        p {
-          margin: 0;
-          font-size: 12px;
-          color: #64748b;
-          line-height: 1.4;
-        }
-      }
-    }
-  }
-}
-
-/* ================= 2. АКТУАЛЬНІ АКЦІЇ ================= */
-.promos_section {
-  margin-bottom: 40px;
-
-  .promos_grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-
-    .promo_box {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      padding: 18px 20px;
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-
-      .promo_icon {
-        font-size: 26px;
-        line-height: 1.2;
-      }
-
-      .promo_content {
-        h4 {
-          margin: 0 0 4px 0;
-          font-size: 15px;
-          font-weight: 700;
-          color: #0f172a;
-        }
-
-        p {
-          margin: 0;
-          font-size: 13px;
-          color: #64748b;
-          line-height: 1.45;
-        }
-      }
-    }
-  }
-}
-
-/* ================= 3. ПРАВИЛА ЗНИЖОК ================= */
-.rules_section {
-  margin-bottom: 35px;
-
-  .rules_box {
-    background: #fffbeb;
-    border: 1px solid #fde68a;
-    border-left: 4px solid #ffb33f; /* Твій теплий акцент */
-    border-radius: 0 10px 10px 0;
-    padding: 20px 24px;
-
-    .rules_header {
-      display: flex;
       align-items: center;
-      gap: 8px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
 
-      .info_icon {
-        font-size: 20px;
+      .method_icon_text {
+        font-size: 26px;
       }
 
-      h3 {
-        margin: 0;
-        font-size: 16px;
+      .price_tag {
+        font-size: 13px;
         font-weight: 800;
-        color: #92400e;
+        padding: 3px 9px;
+        border-radius: 6px;
+
+        &.percent { background: #fee2e2; color: #ff4400; }
+        &.save { background: #dcfce7; color: #15803d; }
       }
     }
 
-    .rules_list {
-      margin: 0 0 0 18px;
-      padding: 0;
+    h4 {
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+    }
 
-      li {
-        font-size: 13.5px;
-        line-height: 1.55;
-        color: #78350f;
-        margin-bottom: 5px;
+    .method_desc {
+      font-size: 13.5px;
+      color: #4b5563;
+      line-height: 1.45;
+      margin: 0 0 16px 0;
+    }
 
-        &:last-child {
-          margin-bottom: 0;
-        }
+    .how_box {
+      margin-top: auto;
+      background: #f1f5f9;
+      border-radius: 8px;
+      padding: 10px 12px;
+
+      .how_label {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #64748b;
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      .how_text {
+        margin: 0;
+        font-size: 12.5px;
+        color: #1e293b;
+        line-height: 1.35;
       }
     }
   }
 }
 
-/* ================= 4. НИЖНЯ ПАНЕЛЬ CTA ================= */
-.footer_cta_box {
+.footer_actions {
   border-top: 1px dashed #cbd5e1;
   padding-top: 25px;
   display: flex;
@@ -274,21 +119,21 @@
   align-items: center;
   gap: 20px;
 
-  .cta_text {
+  .call_us_text {
     strong {
-      font-size: 15px;
+      font-size: 16px;
       color: #0f172a;
       display: block;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
     p {
       margin: 0;
-      font-size: 13px;
+      font-size: 13.5px;
       color: #64748b;
     }
   }
 
-  .cta_buttons {
+  .action_buttons {
     display: flex;
     gap: 12px;
     flex-shrink: 0;
@@ -297,29 +142,22 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: 700;
-      padding: 10px 20px;
+      padding: 11px 22px;
       border-radius: 8px;
       transition: all 0.2s ease;
     }
 
-    .cta_phone_btn {
+    .btn_phone {
       background-color: #134e8e;
       color: #ffffff;
-
-      &:hover {
-        background-color: #185fac;
-        transform: translateY(-1px);
-      }
+      &:hover { background-color: #185fac; transform: translateY(-1px); }
     }
 
-    .cta_catalog_btn {
-      background-color: #f1f5f9;
+    .btn_catalog {
+      background-color: #f8fafc;
       color: #334155;
       border: 1px solid #cbd5e1;
-
-      &:hover {
-        background-color: #e2e8f0;
-      }
+      &:hover { background-color: #e2e8f0; }
     }
   }
 }

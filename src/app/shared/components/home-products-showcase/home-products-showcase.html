@@ -11,7 +11,7 @@
                 <div class="product_container">
                     
                     <div class="product_badge_row">
-                        <span class="stock_badge">@if (product.stock == true){ В наявності } @else{ Немає в наявності }</span>
+                        <span class="stock_badge" [class.out_of_stock]="!product.stock">{{ product.stock ? 'В наявності' : 'Немає в наявності' }}</span>
                         <span class="product_code">Арт: {{product.code}}</span>
                     </div>
 

@@ -1,1 +1,81 @@
-<p>contacts works!</p>
+<main class="contacts_page">
+  <div class="page_title_sector">
+    <h1 class="main_header_title">Контакти</h1>
+  </div>
+
+  <section class="section_card">
+    <div class="contacts_hub_layout">
+      
+      <div class="hub_col info_col">
+        <h2 class="sector_sub_header">Телефони для замовлень</h2>
+        <div class="phone_buttons_group">
+          @for (phone of phoneNumbers; track phone.number) {
+            <a [href]="phone.link" class="contact_action_btn">
+              <div class="btn_text_group">
+                <span class="btn_label">{{ phone.operator }}</span>
+                <strong class="btn_value">{{ phone.number }}</strong>
+              </div>
+              <span class="btn_icon_wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="currentColor" d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z"/>
+                </svg>
+              </span>
+            </a>
+          }
+        </div>
+
+        <h2 class="sector_sub_header">Пошта</h2>
+        <a href="mailto:milaazia@ukr.net" class="contact_action_btn email_btn">
+          <div class="btn_text_group">
+            <span class="btn_label">Для офіційних запитів:</span>
+            <strong class="btn_value">milaazia&#64;ukr.net</strong>
+          </div>
+          <span class="btn_icon_wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="hub_col socials_col">
+        <h2 class="sector_sub_header">Ми в соціальних мережах</h2>
+        <div class="social_buttons_group">
+          <a href="viber://chat?number=%2B380666481318" class="social_card viber_card">
+            <div class="social_card_left">
+              <img src="/images/viber_logo.png" alt="Viber Inter Asia" class="social_logo">
+              <div class="social_texts">
+                <strong>Написати у Viber</strong>
+                <span>Допоможемо з підбором автозапчастин</span>
+              </div>
+            </div>
+            <span class="social_arrow">→</span>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social_card instagram_card">
+            <div class="social_card_left">
+              <img src="/images/instagram_logo.png" alt="Instagram Inter Asia" class="social_logo">
+              <div class="social_texts">
+                <strong>Instagram сторінка</strong>
+                <span>Нові надходження та огляди деталей</span>
+              </div>
+            </div>
+            <span class="social_arrow">→</span>
+          </a>
+        </div>
+
+        <h2 class="sector_sub_header">Графік роботи складу</h2>
+        <div class="schedule_card">
+          <div class="schedule_timeline">
+            @for (row of schedule; track row.day) {
+              <div class="timeline_row" [class.weekend]="!row.isWorking">
+                <span class="t_day">{{ row.day }}</span>
+                <span class="t_dots"></span>
+                <span class="t_time">{{ row.time }}</span>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
