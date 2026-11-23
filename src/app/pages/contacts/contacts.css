@@ -5,7 +5,6 @@
   padding: 0 10px;
 }
 
-/* ================= ДВОКОЛОНКОВИЙ ХАБ ================= */
 .contacts_hub_layout {
   display: flex;
   gap: 30px;
@@ -15,11 +14,10 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
 }
 
-/* ================= КНОПКИ ДІЇ (ТЕЛЕФОНИ ТА ПОШТА) ================= */
 .phone_buttons_group {
   display: flex;
   flex-direction: column;
@@ -83,7 +81,6 @@
   }
 }
 
-/* ================= ГРАФІК РОБОТИ ================= */
 .schedule_card {
   background: #ffffff;
   border: 1px solid #cbd5e1;
@@ -128,7 +125,6 @@
   }
 }
 
-/* ================= МОДИФІКОВАНІ СОЦІАЛЬНІ МЕРЕЖІ ================= */
 .social_buttons_group {
   display: flex;
   flex-direction: column;
@@ -192,7 +188,6 @@
       }
     }
 
-    /* Фірмові відтінки рамок при наведенні */
     &.viber_card:hover {
       border-color: #7360f2;
       .social_texts strong { color: #7360f2; }

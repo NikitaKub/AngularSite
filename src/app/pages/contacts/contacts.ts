@@ -15,8 +15,8 @@ export class Contacts {
   ];
 
   schedule = [
-    { day: 'Пн – Пт', time: '08:00 – 17:00', isWorking: true },
-    { day: 'Субота', time: '08:00 – 15:00', isWorking: true },
+    { day: 'Пн – Пт', time: '09:00 – 17:00', isWorking: true },
+    { day: 'Субота', time: '09:00 – 15:00', isWorking: true },
     { day: 'Неділя', time: 'Вихідний', isWorking: false }
   ];
 }

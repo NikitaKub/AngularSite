@@ -68,7 +68,7 @@
 }
 
 .footer_actions {
-  border-top: 1px dashed #cbd5e1;
+  border-top: 1px dashed #e2e8f0;
   padding-top: 25px;
   display: flex;
   justify-content: space-between;
@@ -76,8 +76,16 @@
   gap: 20px;
 
   .call_us_text {
-    strong { font-size: 16px; color: #0f172a; display: block; margin-bottom: 4px; }
-    p { margin: 0; font-size: 13.5px; color: #64748b; }
+    strong {
+      font-size: 15px;
+      color: #0f172a;
+      display: block;
+    }
+    p {
+      margin: 0;
+      font-size: 13px;
+      color: #4b5563;
+    }
   }
 
   .action_buttons {
@@ -89,7 +97,7 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: 700;
-      padding: 11px 22px;
+      padding: 10px 20px;
       border-radius: 8px;
       transition: all 0.2s ease;
     }
@@ -97,14 +105,30 @@
     .btn_phone {
       background-color: #134e8e;
       color: #ffffff;
-      &:hover { background-color: #185fac; transform: translateY(-1px); }
+      display: flex;
+      gap: 5px;
+
+      svg {
+        display: block;
+        flex-shrink: 0;
+        height: 14px;
+        width: 14px;
+      }
+
+      &:hover {
+        background-color: #185fac;
+        transform: translateY(-1px);
+      }
     }
 
     .btn_catalog {
-      background-color: #f8fafc;
-      color: #334155;
-      border: 1px solid #cbd5e1;
-      &:hover { background-color: #e2e8f0; }
+      background-color: #fbfbfb;
+      color: #0f172a;
+      border: 1px solid #eeeeee;
+
+      &:hover {
+        background-color: #e2e8f0;
+      }
     }
   }
 }

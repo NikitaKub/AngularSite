@@ -4,19 +4,12 @@
   </div>
 
   <section class="section_card">
-    
-    <!-- Постійні знижки -->
     <div class="info_section">
-      <div class="section_title_wrap">
-        <span class="accent_bar"></span>
-        <h2 class="sector_sub_header">Постійні програми лояльності</h2>
-      </div>
-
+      <h2 class="sector_sub_header">Актуальні акції та пропозиції</h2>
       <div class="methods_grid">
         @for (item of mainPrograms; track item.title) {
           <div class="method_box">
             <div class="box_header">
-              <span class="method_icon_text">{{ item.icon }}</span>
               <span class="price_tag percent">{{ item.percent }}</span>
             </div>
             <h4>{{ item.title }}</h4>
@@ -31,34 +24,17 @@
       </div>
     </div>
 
-    <!-- Сезонні акції -->
-    <div class="info_section">
-      <div class="section_title_wrap">
-        <span class="accent_bar"></span>
-        <h2 class="sector_sub_header">Актуальні набори та акції</h2>
-      </div>
-
-      <div class="methods_grid promo_grid">
-        @for (promo of activePromos; track promo.title) {
-          <div class="method_box promo_box">
-            <div class="box_header">
-              <span class="method_icon_text">{{ promo.icon }}</span>
-              <span class="price_tag save">Вигідно</span>
-            </div>
-            <h4>{{ promo.title }}</h4>
-            <p class="method_desc">{{ promo.desc }}</p>
-          </div>
-        }
-      </div>
-    </div>
-
     <div class="footer_actions">
       <div class="call_us_text">
-        <strong>Бажаєте дізнатися вашу персональну знижку за номером?</strong>
-        <p>Менеджер перевірить історію ваших покупок за 30 секунд</p>
+        <strong>Потрібна консультація?</strong>
       </div>
       <div class="action_buttons">
-        <a href="tel:0666481318" class="btn_phone">📞 (066) 648-13-18</a>
+        <a routerLink="/contacts" class="btn_phone">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="CurrentColor" d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z"/>
+          </svg>
+          Проконсультуватись
+        </a>
         <a routerLink="/" class="btn_catalog">Перейти до каталогу</a>
       </div>
     </div>

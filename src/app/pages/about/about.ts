@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-about',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './about.html',
   styleUrl: './about.css',
 })

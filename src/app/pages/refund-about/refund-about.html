@@ -4,43 +4,34 @@
   </div>
 
   <section class="section_card">
-    
-    <!-- 14 днів закон -->
     <div class="info_section">
-      <div class="section_title_wrap">
-        <span class="accent_bar"></span>
-        <h2 class="sector_sub_header">Гарантовані 14 днів на повернення</h2>
-      </div>
+      <h2 class="sector_sub_header">Права споживачів</h2>
+      <ul class="rights_list">
+        <li>Обміняти товар належної якості на аналогічний, якщо деталь не підійшла за формою, габаритами або з інших причин не може бути використана за призначенням.</li>
+        <li>Придбати будь-які інші товари з асортименту з відповідним перерахуванням вартості.</li>
+        <li>Розірвати договір купівлі-продажу та отримати назад кошти у розмірі повної вартості повернутого товару.</li>
+      </ul>
+    </div>
+
+    <div class="info_section">
+      <h2 class="sector_sub_header">Строк повернення</h2>
       <p class="section_text">
         Згідно із Законом України «Про захист прав споживачів», ви маєте право обміняти або повернути деталь належної якості протягом <strong>14 календарних днів</strong> з моменту отримання на Новій Пошті або самовивозу зі складу в Миколаєві.
       </p>
     </div>
 
-    <!-- Умови -->
     <div class="info_section">
-      <div class="section_title_wrap">
-        <span class="accent_bar"></span>
-        <h2 class="sector_sub_header">Умови для повернення</h2>
-      </div>
-
-      <div class="methods_grid conditions_grid">
-        @for (cond of returnConditions; track cond.title) {
-          <div class="method_box">
-            <div class="box_header">
-              <span class="method_icon_text">{{ cond.icon }}</span>
-              <span class="price_tag free">Обов'язково</span>
-            </div>
-            <h4>{{ cond.title }}</h4>
-            <p class="method_desc">{{ cond.desc }}</p>
-          </div>
-        }
-      </div>
+      <h2 class="sector_sub_header">Умови для повернення</h2>
+      <ul class="rights_list">
+        <li>Якщо товар не використовувся.</li>
+        <li>Збережено його товарний вигляд, основні властивості, пломби, ярлики.</li>
+        <li>Збережено розрахунковий документ з датою продажу.</li>
+      </ul>
     </div>
 
-    <!-- Що не підлягає поверненню -->
     <div class="warning_box">
       <div class="warn_header">
-        <span class="warn_icon">⚠️</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" class="decoration"><path fill="currentColor" d="M19.482 20.362a.5.5 0 0 0 .707-.017C22.237 18.198 23.5 15.25 23.5 12s-1.263-6.198-3.311-8.345a.5.5 0 0 0-.724.69C21.34 6.31 22.5 9.013 22.5 12s-1.16 5.69-3.035 7.655a.5.5 0 0 0 .017.707m-14.964 0a.5.5 0 0 0 .017-.707C2.66 17.69 1.5 14.987 1.5 12s1.16-5.69 3.035-7.655a.5.5 0 0 0-.724-.69C1.763 5.802.5 8.75.5 12s1.263 6.198 3.311 8.345a.5.5 0 0 0 .707.017"/><path fill="currentColor" d="M12 4.5a7.5 7.5 0 1 0 0 15a7.5 7.5 0 0 0 0-15M3.5 12a8.5 8.5 0 1 1 17 0a8.5 8.5 0 0 1-17 0"/><path fill="currentColor" d="M12 7c-.736 0-1.313.649-1.244 1.4l.494 4.15a.76.76 0 0 0 .75.7a.76.76 0 0 0 .75-.7l.494-4.15C13.314 7.65 12.736 7 12 7m0 10a1.25 1.25 0 1 0 0-2.5a1.25 1.25 0 0 0 0 2.5"/></svg>
         <h4>Не підлягають поверненню:</h4>
       </div>
       <ul class="warn_list">
@@ -50,13 +41,8 @@
       </ul>
     </div>
 
-    <!-- 4 кроки -->
     <div class="info_section">
-      <div class="section_title_wrap">
-        <span class="accent_bar"></span>
-        <h2 class="sector_sub_header">Порядок повернення: 4 прості кроки</h2>
-      </div>
-
+      <h2 class="sector_sub_header">Порядок повернення: 4 прості кроки</h2>
       <div class="methods_grid steps_grid">
         @for (item of returnSteps; track item.step) {
           <div class="method_box step_box">
@@ -72,11 +58,15 @@
 
     <div class="footer_actions">
       <div class="call_us_text">
-        <strong>Бажаєте оформити повернення або є питання щодо деталі?</strong>
-        <p>Зателефонуйте менеджеру для узгодження даних відправки</p>
+        <strong>Потрібна консультація?</strong>
       </div>
       <div class="action_buttons">
-        <a href="tel:0666481318" class="btn_phone">📞 (066) 648-13-18</a>
+        <a routerLink="/contacts" class="btn_phone">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="CurrentColor" d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z"/>
+          </svg>
+          Проконсультуватись
+        </a>
         <a routerLink="/" class="btn_catalog">Перейти до каталогу</a>
       </div>
     </div>
